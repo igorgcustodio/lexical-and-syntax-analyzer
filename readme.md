@@ -11,6 +11,8 @@ Compilador simples com funções de análise léxica e sintática para a matéri
 
 ## Get started
 
+- Node version: 12.16.1
+
 ```shell
 $ node compiler.js '<expression1>' '<expression2>' '<expressionN>'
 ```
@@ -37,7 +39,7 @@ $ node compiler.js '<expression1>' '<expression2>' '<expressionN>'
   { 
     expression: '1+2', 
     isValid: true, 
-    errors: [] }
-  ]
-
+    errors: [] 
+  }
+]
 ```
