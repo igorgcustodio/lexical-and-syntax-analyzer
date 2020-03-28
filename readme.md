@@ -1,4 +1,4 @@
-# Compiler in Node
+# Lexical and Syntax Analyzer in Node
 
 Compilador simples com funções de análise léxica e sintática para a matéria de Compiladores.
 
@@ -12,29 +12,32 @@ Compilador simples com funções de análise léxica e sintática para a matéri
 ## Get started
 
 ```shell
-$ node compiler.js '<expression>'
+$ node compiler.js '<expression1>' '<expression2>' '<expressionN>'
 ```
 
 ### Exemplos
 
-Expressão: **1+2**
-```shell
-$ node compiler.js '1+2'
+```json5
+[
+  {
+    expression: '1+a',
+    isValid: false,
+    errors: [ 'A expressão contém tokens inválidos' ]
+  },
+  {
+    expression: '76/12',
+    isValid: true,
+    errors: []
+  },
+  {
+    expression: '1+-2',
+    isValid: false,
+    errors: [ 'Não pode ter mais de um símbolo junto' ]
+  },
+  { 
+    expression: '1+2', 
+    isValid: true, 
+    errors: [] }
+  ]
+
 ```
-
-Saída: `true`
-
-Expressão: **(1+2))**
-```shell
-$ node compiler.js '(1+2))'
-```
-
-Saída: `false`
-
-Expressão: **(1/2)**
-```shell
-$ node compiler.js '(1/2)'
-```
-
-Saída: `true`
-

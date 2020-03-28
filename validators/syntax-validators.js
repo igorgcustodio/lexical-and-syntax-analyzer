@@ -10,7 +10,7 @@ const allParenthesisAreClosed = (expression) => {
     const amountOfParenthesisOpened = (expression.match(/\(/g) || []).length
     const amountOfParenthesisClosed = (expression.match(/\)/g) || []).length
     
-    return amountOfParenthesisOpened === amountOfParenthesisClosed
+    return amountOfParenthesisOpened !== amountOfParenthesisClosed
 }
 
 const verifyIfParenthesisIsRight = (expression) => !!expression.match(/\d+\(/g)
